@@ -1,0 +1,16 @@
+GET http://api-local.test:8080/jsonapi/node/noticias
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T065009.200.json
+
+###
+
+GET http://api-local.test:8080/jsonapi/node/noticias/89f573e7-3a49-4d36-a30f-410420cbe6cb
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T064625.200.json
+
+###
+
