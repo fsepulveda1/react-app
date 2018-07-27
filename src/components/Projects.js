@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { CardColumns, Container, Pagination, PaginationItem } from 'reactstrap';
 import MediaObject from "./MediaObject";
 import MyCard from "./Card";
@@ -93,16 +93,18 @@ export default class Projects extends React.Component {
 const ProjectList = (props) => {
     return (
         <div>
-            {/*<CardColumns>*/}
+            <CardColumns>
             { props.data.map(project =>
-                <MediaObject
+                <MyCard
+                    key={project.id}
                     url_image={project.url_image}
                     title={project.name}
                     description={project.description}
                     url_link={project.url_project}
+                    url_detail={'/projects/detail/'+project.id}
                 />
             )}
-            {/*</CardColumns>*/}
+            </CardColumns>
         </div>
     )
 };

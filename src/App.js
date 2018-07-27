@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container } from 'reactstrap';
 import MyNavBar from './components/Navbar';
 import MyFooter from "./components/Footer";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Home from './components/Home';
 import { Route, Switch } from 'react-router-dom'
+import ProjectDetail from "./components/ProjectDetail";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -29,8 +29,9 @@ export default class App extends React.Component {
                 <MyNavBar/>
                 <Switch>
                     <Route key="home" exact path="/" component={Home}/>
-                    <Route key="projects" path="/projects/:page?" component={Projects}/>
+                    <Route key="projects" exact path="/projects/:page?" component={Projects}/>
                     <Route key="content" path="/contact" component={Contact}/>
+                    <Route key="projects-detail" path="/projects/detail/:id" component={ProjectDetail}/>
                 </Switch>
                 <MyFooter/>
             </div>
