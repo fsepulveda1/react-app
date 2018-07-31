@@ -7,10 +7,11 @@ export default class MyCard extends React.Component {
     render() {
         return (
             <Card>
-                {console.log(this.props)}
                 <CardImg top width="100%" src={this.props.url_image} alt="Card image cap" />
                 <CardBody>
-                    <Link to={this.props.url_detail}><CardTitle>{this.props.title}</CardTitle></Link>
+                    <Link to={this.props.url_detail || '#'}>
+                        <CardTitle>{this.props.title}</CardTitle>
+                    </Link>
                     <CardText>{ this.props.description}</CardText>
                     {this.props.url_link && <Button color="info">Visitar sitio</Button>}
                 </CardBody>

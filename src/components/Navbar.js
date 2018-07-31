@@ -4,14 +4,13 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
+import {Link} from "react-router-dom";
 
 export default class MyNavBar extends React.Component {
     constructor(props) {
@@ -32,18 +31,18 @@ export default class MyNavBar extends React.Component {
             <div>
                 <Navbar color="light" light expand="md">
                     <Container>
-                        <NavbarBrand href="/">Sitio de ejemplo</NavbarBrand>
+                        <Link className={'navbar-brand'} to="/">Sitio de ejemplo</Link>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <NavLink href="/about">Quienes somos</NavLink>
+                                    <Link className={'nav-link'} to="/about">Quienes somos</Link>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/projects">Proyectos</NavLink>
+                                    <Link className={'nav-link'} to="/projects">Proyectos</Link>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/contact">Contacto</NavLink>
+                                    <Link className={'nav-link'} to="/contact">Contacto</Link>
                                 </NavItem>
                                 <UncontrolledDropdown nav inNavbar>
                                     <DropdownToggle nav caret>

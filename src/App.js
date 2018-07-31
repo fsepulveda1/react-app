@@ -27,12 +27,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <MyNavBar/>
-                <Switch>
-                    <Route key="home" exact path="/" component={Home}/>
-                    <Route key="projects" exact path="/projects/:page?" component={Projects}/>
-                    <Route key="content" path="/contact" component={Contact}/>
-                    <Route key="projects-detail" path="/projects/detail/:id" component={ProjectDetail}/>
-                </Switch>
+                <Route key="home" exact path="/" component={Home}/>
+                <Route key="projects" exact path="/projects/:page?" component={Projects}/>
+                <Route key="content" path="/contact" component={Contact}/>
+                <Route key="projects-detail" path="/projects/detail/:id" component={ProjectDetail}/>
                 <MyFooter/>
             </div>
         );
